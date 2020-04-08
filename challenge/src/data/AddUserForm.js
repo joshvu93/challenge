@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const AddUserForm = props => {
-	const initialFormState = { id: null, name: '', grade: '' }
+	const initialFormState = { id: null, name: '', grades: '' }
 	const [ student, setStudent ] = useState(initialFormState)
 
 	const handleInputChange = event => {
@@ -12,24 +12,25 @@ const AddUserForm = props => {
 
 	return (
 		<form
-			onSubmit={event => {
-				event.preventDefault()
-				if (!student.name || !student.grade) return
-
+			onSubmit={() => {
+				// event.preventDefault()
+				// if (!student.name || !student.grades)
+				
+				// return
 				props.addStudent(student)
-				setStudent(initialFormState)
+			// 	setStudent(initialFormState)
 			}}
 		>
 			<label>Name</label>
 			<input type="text" name="name" value={student.name} onChange={handleInputChange} />
 			<label>Math</label>
-			<input type="text" name="grade" value={student.Math} onChange={handleInputChange} />
+			<input type="text" name="grade" value={student.grades[0]} onChange={handleInputChange} />
 			<label>History</label>
-			<input type="text" name="grade" value={student.History} onChange={handleInputChange} />
+			<input type="text" name="grade" value={student.grades[1]} onChange={handleInputChange} />
 			<label>Science</label>
-			<input type="text" name="grade" value={student.Science} onChange={handleInputChange} />
+			<input type="text" name="grade" value={student.grades[2]} onChange={handleInputChange} />
 			<label>English</label>
-			<input type="text" name="grade" value={student.English} onChange={handleInputChange} />
+			<input type="text" name="grade" value={student.grades[3]} onChange={handleInputChange} />
 			<button>Add New Student</button>
 		</form>
 	)

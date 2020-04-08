@@ -1,4 +1,5 @@
 import React from 'react'
+import GPA from './GPA'
 
 const StudentTable = props => (
   <table>
@@ -10,7 +11,7 @@ const StudentTable = props => (
         <th>Science</th>
         <th>English</th>
         <th>GPA</th>
-        <th>Actions</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -18,12 +19,11 @@ const StudentTable = props => (
         props.students.map(student => (
           <tr key={student.id}>
             <td>{student.name}</td>
-            <td>{student.grade[0]}</td>
-            <td>{student.grade[1]}</td>
-            <td>{student.grade[2]}</td>
-            <td>{student.grade[3]}</td>
-            <td>{student.grade[4]}</td>
-            <td>{student.gpa}</td>
+            <td>{student.grades[0].slice(-1)}</td>
+            <td>{student.grades[1].slice(-1)}</td>
+            <td>{student.grades[2].slice(-1)}</td>
+            <td>{student.grades[3].slice(-1)}</td>
+            <td><GPA grades={student.grades}/></td>
             <td>
               <button
                 onClick={() => {
@@ -34,7 +34,7 @@ const StudentTable = props => (
                 Edit
               </button>
               <button
-                onClick={() => props.deleteStudent(student.id)}
+                onClick={() => props.deleteStudent(student._id)}
                 className="button muted-button"
               >
                 Delete
