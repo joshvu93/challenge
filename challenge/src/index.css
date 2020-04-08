@@ -19,3 +19,7 @@ code {
 .low { 
   background: #f00; 
 }
+
+.button {
+  background: white;
+}

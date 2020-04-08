@@ -26,22 +26,14 @@ const StudentTable = props => (
             <td><GPA grades={student.grades}/></td>
             <td>
               <button
-                onClick={() => {
-                  props.editRow(student)
-                }}
-                className="button muted-button"
-              >
-                Edit
-              </button>
-              <button
                 onClick={() => props.deleteStudent(student._id)}
-                className="button muted-button"
-              >
+                className="button muted-button">
                 Delete
               </button>
             </td>
           </tr>
-        ))
+        )
+        )
       ) : (
         <tr>
           <td colSpan={3}>No Students</td>

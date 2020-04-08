@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const EditUserForm = props => {
+const EditStudentForm = props => {
   const [ student, setStudent ] = useState(props.currentStudent)
 
   useEffect(
@@ -27,13 +27,13 @@ const EditUserForm = props => {
       <label>Name</label>
       <input type="text" name="name" value={student.name} onChange={handleInputChange} />
       <label>Math</label>
-			<input type="text" name="grade" value={student.grade[0]} onChange={handleInputChange} />
+			<input type="text" name="math" value={student.math} onChange={handleInputChange} />
 			<label>History</label>
-			<input type="text" name="grade" value={student.grade[1]} onChange={handleInputChange} />
+			<input type="text" name="history" value={student.history} onChange={handleInputChange} />
 			<label>Science</label>
-			<input type="text" name="grade" value={student.grade[2]} onChange={handleInputChange} />
+			<input type="text" name="science" value={student.science} onChange={handleInputChange} />
 			<label>English</label>
-			<input type="text" name="grade" value={student.grade[3]} onChange={handleInputChange} />
+			<input type="text" name="english" value={student.english} onChange={handleInputChange} />
       <button>Update Student</button>
       <button onClick={() => props.setEditing(false)} className="button muted-button">
         Cancel
@@ -42,4 +42,4 @@ const EditUserForm = props => {
   )
 }
 
-export default EditUserForm
+export default EditStudentForm

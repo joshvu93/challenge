@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 
-const AddUserForm = props => {
-	const initialFormState = { id: null, name: '', grades: '' }
+const AddStudentForm = props => {
 	const [ newStudent, setNewStudent ] = useState('')
 	const [ math, setMath ] = useState('')
 	const [ history, setHistory ] = useState('')
 	const [ science, setScience ] = useState('')
 	const [ english, setEnglish ] = useState('')
 	const handleInputChange = event => {
-	const { name, value } = event.target
+	const { name } = event.target
 		
 	switch (name) {
 		case 'name':
@@ -26,6 +25,7 @@ const AddUserForm = props => {
 		case 'english':
 			setEnglish(event.target.value)
 			break;
+		default:
 		}
 	}
 
@@ -45,4 +45,4 @@ return (
     </>
   )
 }
-export default AddUserForm
+export default AddStudentForm

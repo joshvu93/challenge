@@ -1,6 +1,6 @@
 import React, { useState }  from 'react'
-import AddUserForm from './data/AddUserForm'
-import EditUserForm from './data/EditUserForm'
+import AddStudentForm from './data/AddStudentForm'
+import EditStudentForm from './data/EditStudentForm'
 import StudentTable from './data/StudentTable'
 import data from './data/students'
 
@@ -42,7 +42,7 @@ const App = () => {
 					{editing ? (
 						<React.Fragment>
 							<h2>Edit Student</h2>
-							<EditUserForm
+							<EditStudentForm
 								editing={editing}
 								setEditing={setEditing}
 								currentStudent={currentStudent}
@@ -52,7 +52,7 @@ const App = () => {
 					) : (
 						<React.Fragment>
 							<h2>Add Student</h2>
-							<AddUserForm addStudent={addStudent} />
+							<AddStudentForm addStudent={addStudent} />
 						</React.Fragment>
 					)}
 				</div>
