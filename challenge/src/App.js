@@ -11,11 +11,10 @@ const App = () => {
   const [currentStudent, setCurrentStudent] = useState(initalFormState)
   const [editing, setEditing] = useState(false)
 
-  const addStudent = student => {
-		console.log(student)
-    student.id = student.length + 1
-    setStudents([...students, student])
-  }
+	const addStudent = newStudentObj => {
+		console.log(newStudentObj)
+		setStudents([...students, newStudentObj])
+	}
 
   const deleteStudent = id => {
     setEditing(false)

@@ -25,7 +25,7 @@ function GPA(props) {
   let gpaResult = gpaMath.reduce((a, b) => a + b)/4
   
 
-  return (gpaResult)
+  return (gpaResult.toFixed(1))
 }
 
 export default GPA
