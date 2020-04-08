@@ -22,9 +22,15 @@ const AddUserForm = props => {
 		>
 			<label>Name</label>
 			<input type="text" name="name" value={student.name} onChange={handleInputChange} />
-			<label>Grade</label>
-			<input type="text" name="grade" value={student.grade} onChange={handleInputChange} />
-			<button>Add new user</button>
+			<label>Math</label>
+			<input type="text" name="grade" value={student.Math} onChange={handleInputChange} />
+			<label>History</label>
+			<input type="text" name="grade" value={student.History} onChange={handleInputChange} />
+			<label>Science</label>
+			<input type="text" name="grade" value={student.Science} onChange={handleInputChange} />
+			<label>English</label>
+			<input type="text" name="grade" value={student.English} onChange={handleInputChange} />
+			<button>Add New Student</button>
 		</form>
 	)
 }

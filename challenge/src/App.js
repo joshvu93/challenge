@@ -11,7 +11,7 @@ const App = () => {
     { id: 3, name: 'Ben', grade: ["Math - A", "History - B", "Science - A", "English - B"] },
 ]
 
-  const initalFormState = {id: null, name: '', grade: ''}
+  const initalFormState = {id: null, name: '', math: '', history: '', science: '', english: ''}
 
   const [students, setStudents] = useState(studentData)
   const [currentStudent, setCurrentStudent] = useState(initalFormState)

@@ -5,7 +5,11 @@ const StudentTable = props => (
     <thead>
       <tr>
         <th>Name</th>
-        <th>Grades</th>
+        <th>Math</th>
+        <th>History</th>
+        <th>Science</th>
+        <th>English</th>
+        <th>GPA</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -14,7 +18,12 @@ const StudentTable = props => (
         props.students.map(student => (
           <tr key={student.id}>
             <td>{student.name}</td>
-            <td>{student.grade}</td>
+            <td>{student.grade[0]}</td>
+            <td>{student.grade[1]}</td>
+            <td>{student.grade[2]}</td>
+            <td>{student.grade[3]}</td>
+            <td>{student.grade[4]}</td>
+            <td>{student.gpa}</td>
             <td>
               <button
                 onClick={() => {
